@@ -1,0 +1,5 @@
+@use './variables' as a;
+
+.projects{
+    @include a.section-style(a.$black);
+}

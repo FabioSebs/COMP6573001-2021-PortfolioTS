@@ -1,0 +1,28 @@
+@use './variables' as a;
+
+.about{
+    @include a.section-style(a.$lightGreen);
+    display: flex;
+    justify-content: center;
+
+    .aboutIntro{
+        top: 120px;
+        position: relative;
+
+        .typy{
+            color: a.$brightYellow;
+        }
+        .ityped-cursor{
+            color: a.$brightYellow;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    }
+}

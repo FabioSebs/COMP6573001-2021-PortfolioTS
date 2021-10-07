@@ -1,0 +1,5 @@
+@use './variables' as a;
+
+.footer{
+    @include a.section-style(a.$salmon)
+}
