@@ -5,7 +5,7 @@ import { ResponsivePlayer } from './ReactPlayer'
 
 const projects = {
     TradingBot : ["https://github.com/FabioSebs/TradingBotAI", "https://www.youtube.com/watch?v=ROJN_ZE_zZs"],
-    DiscordBot : ["https://github.com/FabioSebs/DobiBot", "https://www.youtube.com/watch?v=jokxdylv1wo"],
+    DiscordBot : ["https://github.com/FabioSebs/DobiBot", "https://www.youtube.com/watch?v=Yp_aMeMFulE"],
     DataGolang : ["https://github.com/FabioSebs/Data-Visualization-Golang", "https://www.youtube.com/watch?v=46inEdCu0os"],
     Backend: ["https://github.com/FabioSebs/PortfolioWebsite", "https://www.youtube.com/watch?v=dmwOW15yAjk"],
     Django: ["https://github.com/FabioSebs/DjangoProject", "https://www.youtube.com/watch?v=Rqr-KqveZ3Y&t=17s"]
@@ -17,6 +17,7 @@ const projects = {
 export default function Projects() {
     let [repo,setRepo] = useState(projects.TradingBot[0])
     let [url, setUrl] = useState(projects.TradingBot[1])
+    let [resize, setResize] = useState(true)
 
     const handleClick = (repo) => {
         setRepo(repo)
@@ -45,6 +46,26 @@ export default function Projects() {
         }
     }, [repo])
 
+    // Renders the text based on width
+    useEffect(()=>{
+
+        const handleResize = () => {
+            if (window.innerWidth <= 600) {
+                setResize(true)
+            }
+            else {
+                setResize(false)
+            }
+            console.log("This is from projects.tsx - ", resize)
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener('resize',handleResize)
+        }
+    }, [])
+
     return (
         <section className="projects" id="projects">
             {/* Title + Repo */}
@@ -58,9 +79,9 @@ export default function Projects() {
             </div>
             {/* Selections */}
             <div className="projectsCards">
-                <span onClick={()=>{setRepo(projects.TradingBot[0])}}><h4>Trading Bot</h4></span>
-                <span onClick={()=>{setRepo(projects.DiscordBot[0])}}><h4>Discord Bot</h4></span>
-                <span onClick={()=>{setRepo(projects.DataGolang[0])}}><h4>Data Visualization</h4></span>
+                <span onClick={()=>{setRepo(projects.TradingBot[0])}}><h4>{resize ? "Trading" : "Trading Bot"}</h4></span>
+                <span onClick={()=>{setRepo(projects.DiscordBot[0])}}><h4>{resize ? "Discord" : "Discord Bot"}</h4></span>
+                <span onClick={()=>{setRepo(projects.DataGolang[0])}}><h4>{resize ? "Go Data" : "Go Data Visual"}</h4></span>
                 <span onClick={()=>{setRepo(projects.Backend[0])}}><h4>Rest API</h4></span>
                 <span onClick={()=>{setRepo(projects.Django[0])}}><h4>Django</h4></span>
             </div>

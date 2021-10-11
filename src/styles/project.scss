@@ -18,7 +18,9 @@
         text-align: center;
         margin-top: 155px;
         text-decoration: none;
-        color: white;
+        color: black;
+        background-color: #55efc4;
+
     }
 
     .playerContainer{
@@ -46,6 +48,10 @@
 
             &:hover{
                 cursor: pointer;
+                background-color: black;
+                >*{
+                    color: white;
+                }
             }
 
             h4{
@@ -53,4 +59,14 @@
             }
         }
     }
+}
+@media screen and (max-width:1200px),
+        screen and (max-height: 300px) {
+            .playerContainer{
+                position: relative;
+                height: 30%;
+                width: 50%;
+                top: 30% !important;
+                left: 27%;
+            }
 }

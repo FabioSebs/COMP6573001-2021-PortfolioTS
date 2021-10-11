@@ -125,25 +125,53 @@
     }
 
     .contactSocials {
-      
     }
 }
 
 @media all and (max-width: 878px) {
-    .contactName {
-        font-size: 30px !important;
-    }
+    .contactCard {
+        border-radius: 10px;
+        position: absolute;
+        z-index: 4;
+        background-color: white;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 50em;
+        width: 30%;
+        padding: 2rem;
 
-    .contactPhone{
-        font-size: 15px !important;
-    }
+        .contactName {
+            font-size: 30px !important;
+        }
 
-    .contactPhoto{ 
-        height: 60px !important;
-        width: 60px !important;
-    }
+        .contactPhone {
+            font-size: 15px !important;
+        }
 
-    .contactSocials {
-        display: none !important;
+        .contactPhoto {
+            height: 60px !important;
+            width: 60px !important;
+        }
+
+        .contactSocials {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width:1200px),
+        screen and (max-height: 300px) {
+    .contactCard {
+        border-radius: 10px;
+        position: absolute;
+        z-index: 4;
+        background-color: white;
+        top: 50% ;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 30em !important;
+        width: 30%;
+        padding: 2rem;
     }
 }

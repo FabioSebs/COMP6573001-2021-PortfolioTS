@@ -26,7 +26,7 @@ function About() {
             <div className="aboutDescription">
                 <span className="aboutTyper" ref={typyRef}> </span>
                 <h1 className="aboutHeader">Fabio Espinoza</h1>
-                <h6 className="aboutEssay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores atque error consequatur praesentium natus consectetur, rerum nesciunt minima, reprehenderit fugiat asperiores. Incidunt tempora placeat consequatur illo ipsam explicabo fugit!</h6>
+                <h6 className="aboutEssay"> My name is Fabio! Im a motivated programmer and love to make content. I hope to make it big someday and I am very happy to see you on my website :D </h6>
             </div> 
         </section>
 

@@ -6,7 +6,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 function Hero() {
     //States
-    let [resize, setResize] = useState(false); 
+    let [resize, setResize] = useState(true); 
     let [width, setWidth] = useState(window.innerWidth)
 
     useEffect(()=>{
