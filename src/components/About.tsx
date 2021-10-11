@@ -1,7 +1,7 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import "../styles/about.scss"
-import { Typography } from '@mui/material';
 import { init } from "ityped";
+import AboutPhoto from "../assets/about.png"
 
 function About() {
     let typyRef = useRef();
@@ -18,7 +18,16 @@ function About() {
     return (
 
         <section className="about" id="about">
-            <Typography variant="h1" className="aboutIntro"> <span className="typy" ref={typyRef}></span></Typography>
+            {/* Photo */}
+            <img src={AboutPhoto} className="aboutPhoto"/>
+            {/* Span !not sure if needed*/}
+            <span className="aboutEmpty"></span>
+            {/* Description */}
+            <div className="aboutDescription">
+                <span className="aboutTyper" ref={typyRef}> </span>
+                <h1 className="aboutHeader">Fabio Espinoza</h1>
+                <h6 className="aboutEssay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores atque error consequatur praesentium natus consectetur, rerum nesciunt minima, reprehenderit fugiat asperiores. Incidunt tempora placeat consequatur illo ipsam explicabo fugit!</h6>
+            </div> 
         </section>
 
     )

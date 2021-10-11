@@ -32,7 +32,7 @@ function Hero() {
 
             <div className="text-container">
                 <Typography variant={resize?'h6':'h4'} className="welcomeText"> Hey there,</Typography>
-                <Typography variant={resize?'h5': 'h2'} className="welcomeText"> Welcome to my Portfolio </Typography>
+                <Typography variant={resize?'h5': 'h2'} className="welcomeText"> Welcome </Typography>
                 <Typography variant={resize?'h4':'h1'} className="welcomeText"> I'm Fabio! </Typography>
                 <a href="#about"><ArrowDownwardIcon className="arrowDown"/> </a>
             </div>

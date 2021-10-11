@@ -2,4 +2,55 @@
 
 .projects{
     @include a.section-style(a.$black);
+    position: relative;
+
+    .projectsTitle {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        margin-top: 120px;
+        color: white;
+    }
+
+    .projectsRepo {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        margin-top: 155px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .playerContainer{
+        position: relative;
+        height: 30%;
+        width: 50%;
+        top: 20%;
+        left: 27%;
+    }
+
+    .projectsCards {
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 5rem 3rem;
+        position: absolute;
+        width: 100%;
+        span {
+            width: 200px;
+            height: 30px;
+            background-color: #636e72;
+            align-items: center;
+            text-align: center;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            h4{
+                color:#55efc4;
+            }
+        }
+    }
 }

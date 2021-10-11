@@ -1,4 +1,149 @@
-@use './variables' as a;
-.contact{
-    
+@use "./variables" as a;
+.contact {
+    position: relative;
+
+    .contactCard {
+        border-radius: 10px;
+        position: absolute;
+        z-index: 4;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 50em;
+        width: 30%;
+        padding: 2rem;
+
+        .contactInfo {
+            margin-bottom: 3em;
+            .contactName {
+                font-size: 60px;
+                text-align: center;
+            }
+
+            .contactEmail {
+                text-align: center;
+            }
+
+            .contactPhone {
+                text-align: center;
+            }
+
+            .contactPhoto {
+                width: 10rem;
+                height: 10rem;
+                background-color: a.$salmon;
+                border-radius: 50%;
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .contactSocials {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    color: a.$brightRed;
+                }
+
+                svg {
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .contactCard {
+        border-radius: 10px;
+        position: absolute;
+        z-index: 4;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 50em;
+        width: 30%;
+        padding: 2rem;
+
+        .contactInfo {
+            margin-bottom: 3em;
+
+            .contactName {
+                text-align: center;
+                font-size: 30px;
+            }
+
+            .contactEmail {
+                text-align: center;
+                align-items: center;
+            }
+            .contactPhone {
+                text-align: center;
+            }
+
+            .contactPhoto {
+                width: 5rem;
+                height: 5rem;
+                background-color: a.$salmon;
+                border-radius: 50px;
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .contactSocials {
+            display: block;
+            div {
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                a {
+                    text-decoration: none;
+                    color: a.$brightRed;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 928px) {
+    .contactInfo {
+        .contactEmail {
+            display: none;
+        }
+    }
+
+    .contactSocials {
+      
+    }
+}
+
+@media all and (max-width: 878px) {
+    .contactName {
+        font-size: 30px !important;
+    }
+
+    .contactPhone{
+        font-size: 15px !important;
+    }
+
+    .contactPhoto{ 
+        height: 60px !important;
+        width: 60px !important;
+    }
+
+    .contactSocials {
+        display: none !important;
+    }
 }

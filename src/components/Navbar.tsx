@@ -26,7 +26,7 @@ function Navbar() {
             {/* Logo */}
             <img src={Logo} alt="Signature Logo" className="logo"/>
             {/* Hamburger */}
-            <a href={page} className="hamburger" onClick={handleClick}>
+            <a href='#' className="hamburger" onClick={handleClick}>
                 <span></span>
                 <span></span>
                 <span></span>
