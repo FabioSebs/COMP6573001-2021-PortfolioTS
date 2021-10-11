@@ -82,7 +82,7 @@ export default function Projects() {
                 <span onClick={()=>{setRepo(projects.TradingBot[0])}}><h4>{resize ? "Trading" : "Trading Bot"}</h4></span>
                 <span onClick={()=>{setRepo(projects.DiscordBot[0])}}><h4>{resize ? "Discord" : "Discord Bot"}</h4></span>
                 <span onClick={()=>{setRepo(projects.DataGolang[0])}}><h4>{resize ? "Go Data" : "Go Data Visual"}</h4></span>
-                <span onClick={()=>{setRepo(projects.Backend[0])}}><h4>Rest API</h4></span>
+                <span onClick={()=>{setRepo(projects.Backend[0])}}><h4>{resize ? "API" : "REST API"}</h4></span>
                 <span onClick={()=>{setRepo(projects.Django[0])}}><h4>Django</h4></span>
             </div>
         </section>

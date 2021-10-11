@@ -10,11 +10,12 @@ function Hero() {
     let [width, setWidth] = useState(window.innerWidth)
 
     useEffect(()=>{
+        if (window.innerWidth > 1200) { setResize(false) }
+
         const handleResize = () => {
             setWidth(window.innerWidth)
             if (window.innerWidth < 1300) { setResize(true) }
             else { setResize(false) }
-            console.log(typeof(width))
         }
         window.addEventListener('resize', handleResize);
 
