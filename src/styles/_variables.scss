@@ -9,6 +9,7 @@ $brightYellow: #fdcb6e;
 @mixin section-style($color) {
     background-color: $color;
     height: 100%;
+    display: block;
     top: 120px;
     width: 100%;
     position: relative;

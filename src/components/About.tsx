@@ -19,7 +19,9 @@ function About() {
 
         <section className="about" id="about">
             {/* Photo */}
-            <img src={AboutPhoto} className="aboutPhoto"/>
+            <div className="aboutPhoto">
+                <img src={AboutPhoto} />
+            </div>
             {/* Span !not sure if needed*/}
             <span className="aboutEmpty"></span>
             {/* Description */}

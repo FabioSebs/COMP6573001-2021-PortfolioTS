@@ -79,11 +79,11 @@ export default function Projects() {
             </div>
             {/* Selections */}
             <div className="projectsCards">
-                <span onClick={()=>{setRepo(projects.TradingBot[0])}}><h4>{resize ? "Trading" : "Trading Bot"}</h4></span>
-                <span onClick={()=>{setRepo(projects.DiscordBot[0])}}><h4>{resize ? "Discord" : "Discord Bot"}</h4></span>
-                <span onClick={()=>{setRepo(projects.DataGolang[0])}}><h4>{resize ? "Go Data" : "Go Data Visual"}</h4></span>
-                <span onClick={()=>{setRepo(projects.Backend[0])}}><h4>{resize ? "API" : "REST API"}</h4></span>
-                <span onClick={()=>{setRepo(projects.Django[0])}}><h4>Django</h4></span>
+                <button onClick={()=>{setRepo(projects.TradingBot[0])}}>{resize ? "Trading" : "Trading Bot"}</button>
+                <button onClick={()=>{setRepo(projects.DiscordBot[0])}}>{resize ? "Discord" : "Discord Bot"}</button>
+                <button onClick={()=>{setRepo(projects.DataGolang[0])}}>{resize ? "Go Data" : "Go Data Visual"}</button>
+                <button onClick={()=>{setRepo(projects.Backend[0])}}>{resize ? "API" : "REST API"}</button>
+                <button onClick={()=>{setRepo(projects.Django[0])}}>Django</button>
             </div>
         </section>
     )
