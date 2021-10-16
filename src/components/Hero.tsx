@@ -4,6 +4,7 @@ import '../styles/hero.scss'
 import { Typography } from '@mui/material';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
+
 function Hero() {
     //States
     let [resize, setResize] = useState(true); 

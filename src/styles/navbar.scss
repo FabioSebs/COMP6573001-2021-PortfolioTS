@@ -10,6 +10,7 @@
     z-index: 2;
     background-color: white;
     color: black;
+
     //Logo
     .logo {
         height: 7rem;
@@ -19,7 +20,13 @@
 
     //Hamburger
     .hamburger {
+        background-color: transparent;
         margin-right: 0.8em;
+        border: none;
+
+        &:hover{
+            cursor: pointer;
+        }
         span {
             display: block;
             width: 20px;
@@ -32,7 +39,7 @@
     //Nav Elements
     .nav-elements {
         background-color: white;
-        a {
+        button {
             text-decoration: none;
             margin: 0 1em;
             color: a.$black;
@@ -40,6 +47,7 @@
             position: relative;
             font-size: 25px;
             background-color: white;
+            border: none;
 
             span {
                 position: absolute;
@@ -70,11 +78,12 @@
         display: none;
         background-color: white;
         color: black;
-        a {
+        button {
             background-color: white;
             color: black;
         }
     }
+    
     //NAV ACTIVE
     .nav-elements.active {
         // Styling
@@ -88,7 +97,7 @@
         color: white;
         background-color: black;
         // Positioning Anchor Tags
-        a {
+        button {
             transition: background-color 1s ease, color 1s ease;
             -webkit-transition: background-color 1s ease, color 1s ease;
             color: white;
@@ -101,6 +110,7 @@
             }
 
             &:hover {
+                cursor: pointer;
                 span {
                     background-color: red;
                 }

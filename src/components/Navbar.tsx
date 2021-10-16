@@ -10,15 +10,20 @@ function Navbar() {
     let navElements = useRef()
     let navBar = useRef()
     let [page,setPage] = useState('')
+    let hero = document.querySelector('#hero')
+    let about = document.querySelector('#about')
+    let projects = document.querySelector('#projects')
+    let contact = document.querySelector('#contact')
 
 
     const handleClick = () => {
         navElements.current.classList.toggle('active')
         navBar.current.classList.toggle('active')
-    }
+    } 
 
     const handlePage= (e) => {
         setPage(e.target.href)
+        e.scrollIntoView()
     }
 
     return (
@@ -26,17 +31,17 @@ function Navbar() {
             {/* Logo */}
             <img src={Logo} alt="Signature Logo" className="logo"/>
             {/* Hamburger */}
-            <a href='#' className="hamburger" onClick={handleClick}>
+            <button className="hamburger" onClick={handleClick}>
                 <span></span>
                 <span></span>
                 <span></span>
-            </a>
+            </button>
             {/* Elements */}
-            <div className="nav-elements" ref={navElements}>
-                <a href="#hero" onClick={handlePage}><span></span> <HomeIcon /> Home</a>
-                <a href="#contact" onClick={handlePage}><span></span> <ContactPageIcon /> Contact</a>
-                <a href="#about" onClick={handlePage}><span></span> <InfoIcon /> About</a>
-                <a href="#projects" onClick={handlePage}><span></span> <GitHubIcon />Projects</a>
+            <div className="nav-elements" ref={navElements}> 
+                <button onClick={() => handlePage(hero)}><span></span> <HomeIcon /> Home</button>
+                <button onClick={() => handlePage(about)}><span></span> <InfoIcon /> About</button>
+                <button onClick={() => handlePage(projects)}><span></span> <GitHubIcon />Projects</button>
+                <button onClick={() => handlePage(contact)}><span></span>  <ContactPageIcon /> Contact</button>
             </div>
         </nav>
     )
