@@ -24,7 +24,7 @@
         margin-right: 0.8em;
         border: none;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
         span {
@@ -39,7 +39,7 @@
     //Nav Elements
     .nav-elements {
         background-color: white;
-        button {
+        a {
             text-decoration: none;
             margin: 0 1em;
             color: a.$black;
@@ -83,7 +83,7 @@
             color: black;
         }
     }
-    
+
     //NAV ACTIVE
     .nav-elements.active {
         // Styling
@@ -97,7 +97,7 @@
         color: white;
         background-color: black;
         // Positioning Anchor Tags
-        button {
+        a {
             transition: background-color 1s ease, color 1s ease;
             -webkit-transition: background-color 1s ease, color 1s ease;
             color: white;
