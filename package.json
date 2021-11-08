@@ -19,10 +19,12 @@
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.1",
     "@mui/styled-engine": "^5.0.1",
+    "axios": "^0.23.0",
     "ityped": "^1.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-player": "^2.9.0",
+    "regenerator-runtime": "^0.13.9",
     "sass": "^1.42.1"
   },
   "devDependencies": {

@@ -1,10 +1,10 @@
-$black : #2d3436;
+$black: #2d3436;
 $lightBlue: #81ecec;
 $lightGreen: #00cec9;
 $purple: #7a71f8;
 $salmon: #ff7675;
-$brightRed:#d63031;
-$brightYellow: #fdcb6e;
+$brightRed: #d63031;
+$brightYellow: #ffbe68;
 
 @mixin section-style($color) {
     background-color: $color;

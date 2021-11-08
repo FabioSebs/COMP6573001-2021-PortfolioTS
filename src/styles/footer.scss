@@ -1,5 +1,50 @@
-@use './variables' as a;
+@use "./variables" as a;
 
-.footer{
-    @include a.section-style(a.$salmon)
+.footer {
+    @include a.section-style(a.$brightYellow);
+    text-align: center;
+    overflow: hidden;
+
+    .title {
+        position: relative;
+        top: 180px;
+        background-color: white;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        height: 550px;
+        top: 30%;
+        background-color: a.$lightGreen;
+        padding: 4em 2em;
+        border-radius: 10%;
+        text-align: center;
+
+        label {
+            color: white;
+            padding: 10px 0px;
+        }
+        input {
+            text-align: center;
+        }
+
+        :last-child {
+            margin-top: 2em;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 60% !important;
+    }
 }

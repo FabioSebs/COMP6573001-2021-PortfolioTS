@@ -1,5 +1,6 @@
 @use "./variables" as a;
 .contact {
+    @include a.section-style(a.$salmon);
     position: relative;
 
     .contactCard {
@@ -7,12 +8,13 @@
         position: absolute;
         z-index: 4;
         background-color: white;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -70%);
-        margin-top: 50em;
         width: 30%;
         padding: 2rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 30%;
 
         .contactInfo {
             margin-bottom: 3em;
@@ -67,11 +69,6 @@
         position: absolute;
         z-index: 4;
         background-color: white;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -30%) !important;
-        margin-top: 50em;
-        width: 30%;
         padding: 2rem;
 
         .contactInfo {
@@ -134,10 +131,6 @@
         position: absolute;
         z-index: 4;
         background-color: white;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: 50em;
         width: 30%;
         padding: 2rem;
 
@@ -160,17 +153,13 @@
     }
 }
 
-@media screen and (max-width:1200px),
-        screen and (max-height: 300px) {
+@media screen and (max-width: 1200px), screen and (max-height: 300px) {
     .contactCard {
         border-radius: 10px;
         position: absolute;
         z-index: 4;
         background-color: white;
-        top: 50% ;
         left: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: 30em !important;
         width: 30%;
         padding: 2rem;
     }

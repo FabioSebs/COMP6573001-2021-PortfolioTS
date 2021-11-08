@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import "../styles/contact.scss"
 import { Typography } from '@mui/material';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -13,18 +13,18 @@ export default function Contact() {
     let [name, setName] = useState("Fabio Espinoza")
     //600px change name
 
-    useEffect(()=>{
+    useEffect(() => {
         if (window.innerWidth <= 928) {
             setName("Fabio")
         }
-        window.addEventListener("resize", ()=>{
+        window.addEventListener("resize", () => {
             if (window.innerWidth <= 928) {
                 setName("Fabio")
             } else {
                 setName("Fabio Espinoza")
             }
         })
-    },[])
+    }, [])
 
     return (
 
@@ -32,7 +32,7 @@ export default function Contact() {
             <div className="contactCard">
                 {/* Title */}
                 <div className="contactInfo">
-                    <img src={Portrait} className="contactPhoto"/>
+                    <img src={Portrait} className="contactPhoto" />
                     <Typography variant="h1" className="contactName">{name}</Typography>
                     <Typography variant="h6" className="contactEmail">E: fasezayt@gmail.com</Typography>
                     <Typography variant="h6" className="contactPhone">T: +1 732-216-7842</Typography>
