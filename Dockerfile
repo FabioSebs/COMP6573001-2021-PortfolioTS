@@ -1,15 +1,13 @@
-FROM node:15
+FROM node:16.13-alpine
 
 WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
+COPY package.json /app
+COPY package-lock.json /app
+COPY . /app
 
-COPY package.json ./
-COPY package-lock.json ./
-
+RUN yarn add react-scripts@3.4.1 webpack webpack-cli webpack-server -g
 RUN yarn
-RUN yarn add react-scripts@3.4.1 -g 
 
-COPY . ./
 
 CMD ["yarn","start"]

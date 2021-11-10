@@ -4,7 +4,7 @@ WORKDIR '/backend'
 
 COPY ./ /backend/
 
-RUN go get -u
+RUN go mod download
 
 EXPOSE "3030"
 
