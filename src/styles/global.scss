@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hind Siliguri", sans-serif;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body {
+    
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
+}
+
+#root {
+    
+    scroll-snap-type: y mandatory;
+    scroll-snap-type: mandatory;
+    height: 100vh;
+    >*{
+        scroll-snap-align: start;
+    }
+}

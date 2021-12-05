@@ -1,0 +1,32 @@
+$black: #2d3436;
+$lightBlue: #81ecec;
+$lightGreen: #00cec9;
+$purple: #7a71f8;
+$salmon: #ff7675;
+$brightRed: #d63031;
+$brightYellow: #ffbe68;
+
+@mixin section-style($color) {
+    background-color: $color;
+    height: 100%;
+    display: block;
+    top: 120px;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+@mixin animation($name) {
+    // Animation
+    -webkit-animation-name: $name;
+    animation-name: $name;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transition: all ease;
+}
